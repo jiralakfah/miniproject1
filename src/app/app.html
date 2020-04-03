@@ -1,0 +1,23 @@
+<ion-menu [content]="content" type="overlay">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>เมนู</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content>
+  <ion-item >
+    <ion-avatar item-left>
+      <img src="https://scontent.fhdy4-1.fna.fbcdn.net/v/t1.0-9/73157425_986611798345713_5468428287699058688_n.jpg?_nc_cat=110&_nc_sid=7aed08&_nc_eui2=AeFW2pBrjo9_jgTZwLHX8fIJhWoZX9SHUMIg19FebTNyMOQS3K2np1orzUjuvqwZbcYbB-yFYX_FklzlWlBeLO8tltxZ_R-K_a2j-qOiSHqMTw&_nc_ohc=WeNvvZ077ygAX_2oq2G&_nc_ht=scontent.fhdy4-1.fna&oh=db0b4918a47bcea02790c435b38c2c49&oe=5EAAEEAB">
+    </ion-avatar>
+    <h2>จิราลักษณ์ หมวกแก้ว</h2>
+    <p>ID : 604235005</p>
+  </ion-item>
+    <ion-list>
+      <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
+        {{p.title}}
+      </button>
+    </ion-list>
+  </ion-content>
+</ion-menu>
+<!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>
